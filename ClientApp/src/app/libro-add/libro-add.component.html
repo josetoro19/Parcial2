@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">BIBLIOTECA </h1>
+    </div>
+    <p>Aplicación para agregar libro</p>
+    <div class="form-group">
+    <label>Id:
+    <input [(ngModel)]="libro.id" class="form-control" placeholder="digite el id" type="number" />
+    </label>
+    </div> 
+    <div class="form-group">
+    <label>Titulo:
+    <input [(ngModel)]="libro.titulo" class="form-control" placeholder="digite titulo" type="text"/>
+    </label>
+    </div>
+    <div class="form-group">
+    <label>Precio De Venta:
+    <input [(ngModel)]="libro.precioVenta" class="form-control" placeholder="digite descripción " type="number" />
+    </label>
+    </div>
+    <div class="form-group">
+    <label>Popularidad:
+    <input type="checkbox" class="form-control" [(ngModel)]="libro.popularidad">
+    </label>
+    </div>
+    <div class="form-group">
+    <button (click)="add()" class="btn btn-primary">Agregar</button>
+    </div>

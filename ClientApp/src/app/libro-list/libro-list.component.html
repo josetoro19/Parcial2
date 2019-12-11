@@ -1,0 +1,29 @@
+<div>
+  <h1 class="h2">List</h1>
+</div>
+<div class="form-group">
+  <input class="form-control" name="filtrarEst" type="text" placeholder="Buscar..."
+      [(ngModel)]="Buscar" />
+</div>
+
+<div>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+      <tr>
+        <th>ISBM</th>
+        <th>Titulo</th>
+        <th>PrecioVenta</th>
+        <th>Popularidad</th>
+        <th>Ver</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let libro of libros | libroFiltro:Buscar">
+      <td>{{libro.id}}</td>
+      <td>{{libro.titulo}}</td>
+      <td>{{libro.precioVenta}}</td>
+      <td><span *ngIf="libro.popularidad===true;"> <b>Popularidad</b> </span></td>
+      <td><a routerLink="/Editar/{{libro.id}}">ver</a></td>
+    </tr>
+  </table>
+</div>
